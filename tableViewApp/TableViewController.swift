@@ -36,12 +36,20 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+
         
         resultArray.remove(at: indexPath.row)
+        //
+        UserDefaults.standard.set(resultArray, forKey:"add")
         tableView.deleteRows(at: [indexPath], with: .fade)
         
+
     }
 
+    
+
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

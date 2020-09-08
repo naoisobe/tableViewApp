@@ -37,11 +37,7 @@ class addListViewController: UIViewController {
         
         array.append(addText.text!)
         
-        
-
         UserDefaults.standard.set(array, forKey: "add")
-        
-
         
         self.navigationController?.popViewController(animated: true)
         
